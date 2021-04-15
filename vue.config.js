@@ -13,10 +13,10 @@ const resolve = dir => {
 // 需要将它改为'/my-app/'
 // 'http://103.248.102.7:8080/dist/'
 const BASE_URL = process.env.NODE_ENV === 'production'
-  //? 'http://10.10.10.107:8080/'
-  // ? 'http://103.248.102.7:8080/i9-fingerlock-api/'
+  ? 'http://10.10.10.107:8080/'
+  ? 'http://103.248.102.7:8080/i9-fingerlock-api/'
   ? 'http://localhost:8081/'
-  //: 'http://103.248.102.7:8080/dist/'
+  : 'http://103.248.102.7:8080/dist/'
   : '/'
 module.exports = {
   // Project deployment base
@@ -48,8 +48,8 @@ module.exports = {
         '/api':
           {
             target: 'http://192.168.0.100:8080',
-            // target: 'http://119.23.31.181:8080/gbq-api/',
-            // target: 'http://103.248.102.7:8080/i9-fingerlock-api/',
+            target: 'http://119.23.31.181:8080/gbq-api/',
+            target: 'http://103.248.102.7:8080/i9-fingerlock-api/',
             pathRewrite: {'^/api': '/'},
             changeOrigin: true
           }
